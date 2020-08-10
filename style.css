@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/bg01.jpg");
+    background-color: #cccccc;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5d4954;
+    font-family: 'Arima Madurai', cursive;
+}
+
+.logo{
+    color: rgb(211, 207, 207);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(211, 207, 207);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: rgb(211, 207, 207);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*For link spacing when in tablet mode*/
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+/*For link spacing when in mobile mode*/
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*About us page*/
+.about-section{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-inner-container{
+    background: white;
+    margin: 150px;
+    margin-bottom: 50px;
+    padding: 30px;
+    line-height: 20px;
+    color: rgb(128, 141, 140);
+}
+
+.about-inner-container h1{
+    color: rgb(101, 161, 156);
+    font-size: 32px;
+    margin: 50px;
+}
+
+.about-text{
+    margin: 30px;
+    text-align: justify;
+}
+
+/* Contact us section */
+
+.contact-section{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-inner-container{
+    background: white;
+    margin: 150px;
+    margin-bottom: 50px;
+    padding: 30px;
+    line-height: 20px;
+    color: rgb(128, 141, 140);
+}
+
+.contact-inner-container h1{
+    color: rgb(101, 161, 156);
+    font-size: 32px;
+    margin: 50px;
+}
+
+.fab {
+    font-size: 30px;
+}
+
+.fab:hover{
+    color: black;
+    font-size: 35px;
+}
+
+.fas {
+    font-size: 30px;
+}
+
+.fas:hover{
+    color: black;
+    font-size: 35px;
+}
