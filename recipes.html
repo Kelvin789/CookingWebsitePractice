@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/26d4a64054.js"></script>
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -26,36 +28,44 @@
         </div>
     </nav>
 
-    <script src="app.js"></script>
-
     <div class="contact-section">
         <div class="contact-inner-container">
-            <h1>-- Functionality to be Developed --</h1>
             <h1>Recipe Ingredients Search</h1>
             <p><code class="copyright-text">Powered by <a href="http://www.recipepuppy.com/about/api/" target= "_blank">🐶 Recipe Puppy</a></code></p>
             <br />
-            
-            <p class="section-subheading">
-                <form id="query-form">
-                    <br />
-                    <div>
-                        <label for="ingredients">Ingredients (commas separated):</label><input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g. beef, potato (optional)" onChange="sanitizeInputs()" />
-                    </div>
-                    <br />
-                    <div>
-                        <label for="contains">Dish Name Contains (no commas):</label><input class="textfield" id="contains" type="text" name="contains" placeholder="e.g. spaghetti (optional)" onChange="sanitizeInputs()" /></div>
-                    <div class="button">
+
+            <div class="section-description">
+
+                <p class="section-subheading">
+                    <form id="query-form">
                         <br />
-                        <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
-                        <input class="button" type="submit" value="Search ..." id="searchButton" />
-                    </div>
-                </form>
-            </p>
+                        <div>
+                            <label for="ingredients">Ingredients (commas separated):</label><input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g. beef, potato (optional)" onChange="sanitizeInputs()" />
+                        </div>
+                        <br />
+                        <div>
+                            <label for="contains">Dish Name Contains (no commas):</label><input class="textfield" id="contains" type="text" name="contains" placeholder="e.g. spaghetti (optional)" onChange="sanitizeInputs()" /></div>
+                        <div class="button">
+                            <br />
+                            <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
+                            <input class="button" type="submit" value="Search ..." id="searchButton" />
+                        </div>
+                    </form>
+                </p>
+            </div>
 
             <div class="section-subheading" id="search-results-heading"></div>
             <div class="results-div" id="results"></div>
         </div>
     </div>
+
+    <div class="section-subheading" id="search-results-heading"></div>
+    <div class="results-div" id="results"></div>
 </body>
+
+<!-- JQuery Scripts -->
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="kitchenblue.js"></script>
 
 </html>
