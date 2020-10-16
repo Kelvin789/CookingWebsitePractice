@@ -1,71 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/26d4a64054.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link rel="stylesheet" href="style.css?v=1">
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/26d4a64054.js"></script>
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <h4>Recipes for Masters<h4>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
+  <nav>
+    <div class="logo">
+        <h4>Recipes for Masters<h4>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+  </nav>
 
-    <div class="contact-section">
-        <div class="contact-inner-container">
-            <h1>Recipe Ingredients Search</h1>
-            <p><code class="copyright-text">Powered by <a href="http://www.recipepuppy.com/about/api/" target= "_blank">🐶 Recipe Puppy</a></code></p>
+  <div class="recipe-section">
+    <div class="recipe-inner-container">
+
+      <h2 class='section-subheading'>Recipe Search by Ingredients</h2>
+      <p><code class="copyright-text">Powered by <a href="http://www.recipepuppy.com/about/api/" target= "_blank">🐶 Recipe Puppy</a></code></p>
+      <br />
+
+      <div class="section-description">
+        <p class="section-subheading">
+          <form id="query-form">
+            <div>
+              <label for="ingredients">Ingredients (commas separated):</label><input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g. beef, potato (optional)" onChange="sanitizeInputs()" />
+            </div>
             <br />
 
-            <div class="section-description">
-
-                <p class="section-subheading">
-                    <form id="query-form">
-                        <br />
-                        <div>
-                            <label for="ingredients">Ingredients (commas separated):</label><input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g. beef, potato (optional)" onChange="sanitizeInputs()" />
-                        </div>
-                        <br />
-                        <div>
-                            <label for="contains">Dish Name Contains (no commas):</label><input class="textfield" id="contains" type="text" name="contains" placeholder="e.g. spaghetti (optional)" onChange="sanitizeInputs()" /></div>
-                        <div class="button">
-                            <br />
-                            <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
-                            <input class="button" type="submit" value="Search ..." id="searchButton" />
-                        </div>
-                    </form>
-                </p>
+            <div>
+              <label for="contains">Dish Name Contains (no commas):</label><input class="textfield" id="contains" type="text" name="contains" placeholder="e.g. spaghetti (optional)" onChange="sanitizeInputs()" />
             </div>
+            <br />
+            
+            <div class="btn-container">
+              <br />
+              <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
+              <input class="button" type="submit" value="Search" id="searchButton" />
+            </div>
+          </form>
+        </p>
 
-            <div class="section-subheading" id="search-results-heading"></div>
-            <div class="results-div" id="results"></div>
-        </div>
+        <div class="section-subheading" id="search-results-heading"></div>
+        <div class="results-div" id="results"></div>
+
+      </div>
     </div>
+  </div>
 
-    <div class="section-subheading" id="search-results-heading"></div>
-    <div class="results-div" id="results"></div>
+  <footer>
+    <div class="copyright-text">
+        <p><code class="copyright-text">@ 2020 Kelvin James</code></p>
+        <p><code class="copyright-text">Search powered by <a href="http://www.recipepuppy.com/about/api/" target= "_blank">🐶 Recipe Puppy</a></code></p>
+    </div>
+  </footer>
 </body>
 
-<!-- JQuery Scripts -->
-<script src="app.js"></script>
+<script src="app.js?v=1"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="kitchenblue.js"></script>
+<script src="kitchenblue.js?v=1"></script>
 
 </html>

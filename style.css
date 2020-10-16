@@ -239,8 +239,60 @@ nav{
 
 /* Recipe page */
 
+.recipe-section{
+  display: flex;
+  text-align: center;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recipe-inner-container{
+  background: white;
+  margin: 150px;
+  margin-bottom: 50px;
+  padding: 30px;
+  line-height: 20px;
+  color: rgb(128, 141, 140);
+  border-style: groove;
+  border-color: #5d4954;
+}
+
+.recipe-inner-container h1{
+  color: rgb(101, 161, 156);
+  font-size: 32px;
+  margin: 50px;
+}
+
+.recipe-text{
+  margin: 30px;
+  text-align: justify;
+}
+
 input {
   width: 30%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(101, 161, 156);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: rgb(101, 161, 156);
+  border: none;
+  color: #5d4954;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 label {
@@ -260,7 +312,6 @@ p {
   font-size: 1.2rem;
   text-align: center;
 }
-
 
 h1 {
   color: rgb(101, 161, 156);
@@ -372,7 +423,17 @@ a:hover {
 .copyright-text {
   color: rgb(101, 161, 156);
   font-size: 14px;
-  margin: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer{
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #5d4954;
+  font-family: 'Arima Madurai', cursive;
 }
 
 /* RESPONSIVE ADJUSTMENTS
